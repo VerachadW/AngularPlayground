@@ -1,0 +1,21 @@
+{
+  "name": "angular-playground",
+  "version": "0.0.0",
+  "authors": [
+    "Verachad Wongsawangtham <birth24987@gmail.com>"
+  ],
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "angular-route": "~1.4.0",
+    "angular-material": "~0.9.8",
+    "angular": "~1.4.0",
+    "ngmap": "~1.7.11"
+  }
+}

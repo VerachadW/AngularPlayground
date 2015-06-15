@@ -1,0 +1,33 @@
+<html ng-app="AngularApp" >
+    <head>
+        <link rel="stylesheet" href="bower_components/angular-material/angular-material.css" />
+        <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css?family=RobotoDraft:300,400,500,700,400italic"/>
+        <script src="bower_components/angular/angular.js"></script>
+        <script src="bower_components/angular-route/angular-route.js"></script>
+        <script src="bower_components/angular-animate/angular-animate.js"></script>
+        <script src="bower_components/angular-aria/angular-aria.js"></script>
+        <script type="text/javascript" src="bower_components/angular-material/angular-material.js"></script>
+        <script src="bower_components/ngmap/build/scripts/ng-map.min.js"></script>
+        <script src="https://maps.googleapis.com/maps/api/js"></script>
+        <script src="app.js"></script>
+    </head>
+    <body>
+        <div ng-controller="AppController">
+            <md-content layout-padding style="height:500px;padding: 16px;">
+                <md-button class="md-primary md-raised" ng-click="showForm()" flex flex-md="100">Set
+                Marker</md-button>
+                <map center="current_location">
+                    <marker id="current" position="current_location" on-click="showInfoWindow(event, 'markerInfo')"></marker>
+                    <info-window id="markerInfo" visible-on-marker="current">
+                        <div ng-non-bindable="">
+                            <div id="siteNotice"></div>
+                            <h2 id="firstHeading" class="firstHeading">{{markerText}}</h2>
+                            <div id="bodyContent"></div>
+                        </div>
+                    </info-window>
+                </map>
+            </md-content>
+        </div>
+    </body>
+</html>
